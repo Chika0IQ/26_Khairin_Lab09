@@ -15,12 +15,11 @@ public class Character : MonoBehaviour
 
 
     public GameObject Text;
+    
     // Start is called before the first frame update
     void Start()
     {
-        PositionX = gameObject.transform.position.x;
-        PositionY = gameObject.transform.position.y;
-        PositionZ = gameObject.transform.position.z;
+
     }
 
     // Update is called once per frame
@@ -31,6 +30,7 @@ public class Character : MonoBehaviour
         PositionY = gameObject.transform.position.y;
         PositionZ = gameObject.transform.position.z;
 
+        
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -48,7 +48,9 @@ public class Character : MonoBehaviour
             transform.Rotate(new Vector3(0, Time.deltaTime * -rotatespeed, 0));
         }
 
-        Text.GetComponent<Text>().text = "Postion: (" + PositionX + "," + PositionY + "," + PositionZ + ")";
+        Text.GetComponent<Text>().text = "Postion: ( " + PositionX + ", " + PositionY + ", " + PositionZ + " )";
+        
+
 
     }
 }
